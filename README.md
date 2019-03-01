@@ -1,3 +1,5 @@
+This is a sample repo to demonstrate a bug with Puppeteer and Dank Mono when saving an HTML document as PDF.
+
 How to reproduce:
 
 - clone this repo
