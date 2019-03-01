@@ -6,8 +6,10 @@ How to reproduce:
 - yarn install
 - yarn start
 
-You should now see a `printed.pdf` in the root directory.
+You should now see a `printed.pdf` in the root directory. This PDF does not contain certain characters (like the `f` in `function` or the `//` from the comment).
 
 Change `font-family` in `templates/layout.html:121` to `Courier New` (or basically anything but `Dank Mono`). It works!
 
-You can open and print the HTML file (`html/index.html`) in Chrome and it should work perfectly fine. Just not in Puppeteer.
+You can open and print the HTML file (`html/index.html`) in a real non-headless Chrome and it works perfectly fine but not in Puppeteer.
+
+Happens on Windows 10 v1809, Build 17763.316

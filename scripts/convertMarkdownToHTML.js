@@ -6,7 +6,7 @@ const showdownHighlight = require('showdown-highlight');
 const prettier = require('prettier');
 
 const converter = new showdown.Converter({
-  extensions: ['gitbook-hints', showdownHighlight],
+  extensions: [showdownHighlight],
 });
 
 converter.setFlavor('github');
@@ -34,12 +34,7 @@ const convertFile = (filename) => {
     }
   );
 
-  const convertedFile = converter
-    .makeHtml(rawFile)
-    .replace(
-      /<p>(.*)<img(.*)alt="(.*)"(.*)>(.*)<\/p>/g,
-      '<p class="has-image">$1<span><img$2alt="$3"$4><span class="caption">$3</span></span>$5</p>'
-    );
+  const convertedFile = converter.makeHtml(rawFile);
 
   return convertedFile;
 };
