@@ -1,0 +1,21 @@
+{
+  "name": "f-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node scripts/convertMarkdownToHTML",
+    "generate": "node scripts/generatePdf",
+    "start": "yarn convert && yarn generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "prettier": "^1.16.4",
+    "puppeteer": "^1.12.2",
+    "showdown": "^1.9.0",
+    "showdown-highlight": "^2.1.3"
+  }
+}
