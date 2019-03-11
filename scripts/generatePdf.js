@@ -9,7 +9,7 @@ app.use('/assets', express.static('assets'));
 const server = app.listen(3000, () => {
   console.log('server listening on http://localhost:3000');
   (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
     const page = await browser.newPage();
     await page.goto('http://localhost:3000/index.html', {
       waitUntil: 'load',
